@@ -1,9 +1,20 @@
 import React, { Component } from 'react'
+import {store} from './Redux/store'
+import Provider  from 'react'
+import User from './User/User'
 
-export class App extends Component {
+
+ class App extends Component {
+  
   render() {
     return (
-      <div>App</div>
+      <>
+      <h1>App Component</h1>
+      <Provider store={store}>
+      <User/>
+      </Provider>
+      
+      </>
     )
   }
 }
